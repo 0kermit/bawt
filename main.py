@@ -43,22 +43,19 @@ async def on_message(message):
 
 
     if msg.startswith('massping'):
-        if message.author.id == 646878567652786196:
-            try:
-                await message.delete()
-                masspinglist = msg.split(' ', 2)
-                target = masspinglist[1]
-                times = masspinglist[2]
-                if int(times)<=50:
-                    for i in range(0,int(times)):
-                        await send(target)
-                else:
-                    await send('enter a number at most 50')
-            except:
-                await send('missing parameters')
-        else:
-            await send('sucks to suck')
-
+        try:
+            await message.delete()
+            masspinglist = msg.split(' ', 2)
+            target = masspinglist[1]
+            times = masspinglist[2]
+            if int(times)<=50:
+                for i in range(0,int(times)):
+                    await send(target)
+            else:
+                await send('enter a number at most 50')
+        except:
+            await send('missing parameters')
+ 
 
 
     if msg == 'delete':
@@ -70,8 +67,6 @@ async def on_message(message):
 
     if msg == '!help':
         await send('no')
-
-    if msg == '!servers':
 
 
     await bot.process_commands(message)
