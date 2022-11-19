@@ -9,12 +9,6 @@ from time import sleep
 client = discord.Client
 
 
-
-def setup(client):
-    client.add_cog(OwnerCommands(client))
-
-
-
 activity = discord.Activity(type=discord.ActivityType.watching, name="you")
 #bot = commands.Bot(command_prefix="!", activity=activity, status=discord.Status.idle, intents=discord.Intents.default())
 bot = commands.Bot(intents=discord.Intents.all(),activity=activity,status=discord.Status.idle,command_prefix=".")
@@ -22,7 +16,7 @@ client = discord.Client
 
 @bot.event
 async def on_ready():
-    print("your bawt is online -_-")
+    print("your bawt is online")
 
 
 @bot.event
