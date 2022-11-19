@@ -10,7 +10,6 @@ client = discord.Client
 
 
 activity = discord.Activity(type=discord.ActivityType.watching, name="you")
-#bot = commands.Bot(command_prefix="!", activity=activity, status=discord.Status.idle, intents=discord.Intents.default())
 bot = commands.Bot(intents=discord.Intents.all(),activity=activity,status=discord.Status.idle,command_prefix=".")
 client = discord.Client
 
